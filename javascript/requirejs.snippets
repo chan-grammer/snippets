@@ -1,0 +1,25 @@
+# requirejs define
+snippet def
+	define([${1:jquery}],
+	 function(${2:arg}) {
+		${0}
+	});
+#requirejs define (obj literal)
+snippet def{
+	define({
+		${1:prop1} : ${2:value1}
+	});
+#requirejs define (function)
+snippet deff
+	define(function (${1:par}) {
+		${2:declarations}
+		return {
+			${3:return}
+		};
+	});
+# requirejs require
+snippet req
+	require(['${1:dependencies}'],
+	 function(${2:arg}) {
+		${0}
+	});
