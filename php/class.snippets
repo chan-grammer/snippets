@@ -1,0 +1,37 @@
+#Object Oriented Constructs
+#class
+snippet class
+	class ${1:ClassName}
+	{
+		${2:properties}
+	}
+#variable declaration
+snippet prop
+	${1:accessor} ${2:propertyName} = ${3:value};
+#method declaration
+snippet method
+	${1:accessor} function ${2:functionName}(${3})
+	{
+		${0}
+	}
+#this->propertyName = value
+snippet thisProp=
+	$this->${1:propName} = ${2:propValue};
+#this->propertyName
+snippet thisProp
+	$this->${1:propName}
+#this->method(arg)
+snippet thisCall
+	$this->${1:method}(${2});
+#Class::method
+snippet ::M
+	${1:Class}::${2:method}(${3})
+#Class::property
+snippet ::P
+	${1:Class}::${2:property}
+#Instantiating
+snippet newObj
+	${1:var} = new ${2:Class}(${3:arguments});
+#$instance->methodName()
+snippet objCall
+	$${1:obj}->${2:methodName}(${3})
